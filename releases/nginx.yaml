@@ -6,7 +6,7 @@ metadata:
   namespace: nginx
   annotations:
     flux.weave.works/automated: "true"
-    flux.weave.works/tag.nginx: semver:~1.16
+    flux.weave.works/tag.nginx: semver:~1.19
     flux.weave.works/locked: 'true'
     flux.weave.works/locked_msg: '"Halt updates for now"'
     flux.weave.works/locked_user: User Name <user@example.com>
@@ -15,13 +15,13 @@ spec:
   chart:
     repository: https://charts.bitnami.com/bitnami/
     name: nginx
-    version: 3.3.2
+    version: 6.0.5
   values:
     usePassword: true
     image:
       registry: docker.io
       repository: bitnami/nginx
-      tag: 1.16.0-debian-9-r46
+      tag: 1.19.1
     service:
       type: LoadBalancer
       port: 80
